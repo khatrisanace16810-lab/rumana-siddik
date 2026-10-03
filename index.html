@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rumana ❤️ Siddik</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial;
+ background:linear-gradient(135deg,#ffd6e5,#ead9ff);
+ overflow:hidden;
+}
+.page{
+ height:100vh;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:25px;
+}
+.active{display:flex}
+
+.card{
+ width:100%;
+ max-width:380px;
+ padding:35px 20px;
+ border-radius:30px;
+ background:rgba(255,255,255,.85);
+ box-shadow:0 10px 35px #c9a7b8;
+ animation:up 1s;
+}
+
+@keyframes up{
+ from{opacity:0;transform:translateY(40px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+.heart{
+ font-size:75px;
+ animation:beat 1s infinite;
+}
+@keyframes beat{
+ 50%{transform:scale(1.2)}
+}
+
+h1{
+ color:#c23e6c;
+ font-family:cursive;
+ font-size:38px;
+}
+p{
+ color:#666;
+ font-size:17px;
+ line-height:1.6;
+}
+
+button{
+ border:0;
+ padding:13px 28px;
+ border-radius:30px;
+ background:#c23e6c;
+ color:white;
+ font-size:16px;
+ margin-top:15px;
+}
+
+.names{
+ font-family:cursive;
+ font-size:28px;
+ color:#c23e6c;
+ margin:15px 0;
+}
+
+.month{
+ font-family:cursive;
+ font-size:38px;
+}
+
+.year{font-size:24px}
+
+.calendar{
+ display:grid;
+ grid-template-columns:repeat(7,1fr);
+ gap:5px;
+ margin-top:20px;
+}
+
+.day{
+ font-size:11px;
+ font-weight:bold;
+ color:#888;
+ padding:7px 0;
+}
+
+.date{
+ height:38px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ position:relative;
+}
+
+.special{
+ background:#ffd1df;
+ border-radius:50%;
+ color:#c23e6c;
+ font-weight:bold;
+ margin-top:13px;
+}
+
+.special:before{
+ content:"❤️";
+ position:absolute;
+ top:-25px;
+ font-size:21px;
+ animation:beat 1s infinite;
+}
+
+.float{
+ position:fixed;
+ font-size:25px;
+ animation:fall 6s linear infinite;
+}
+@keyframes fall{
+ from{transform:translateY(-50px)}
+ to{transform:translateY(110vh)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="float" style="left:10%">💕</div>
+<div class="float" style="left:80%;animation-delay:2s">❤️</div>
+<div class="float" style="left:45%;animation-delay:4s">✨</div>
+
+<!-- PAGE 1 -->
+<section class="page active" id="p1">
+<div class="card">
+<div class="heart">💌</div>
+<h1>A Special Announcement</h1>
+<p>Something beautiful is about to begin...</p>
+<button onclick="next(2)">Open ❤️</button>
+</div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="p2">
+<div class="card">
+<div class="heart">❤️</div>
+<h1>Congratulations!</h1>
+<p>
+A beautiful new chapter<br>
+is about to begin...
+</p>
+<div class="names">
+Rumana Masi<br>❤️<br>Siddik Maha
+</div>
+<button onclick="next(3)">Continue ✨</button>
+</div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="p3">
+<div class="card">
+<h1>Save The Date 💍</h1>
+<p>Our special date is fixed!</p>
+
+<div class="month">December</div>
+<div class="year">2026</div>
+
+<div class="calendar">
+
+<div class="day">Sun</div>
+<div class="day">Mon</div>
+<div class="day">Tue</div>
+<div class="day">Wed</div>
+<div class="day">Thu</div>
+<div class="day">Fri</div>
+<div class="day">Sat</div>
+
+<div></div><div></div>
+
+<div class="date">1</div>
+<div class="date">2</div>
+<div class="date">3</div>
+<div class="date">4</div>
+<div class="date">5</div>
+
+<div class="date">6</div>
+<div class="date">7</div>
+<div class="date">8</div>
+<div class="date">9</div>
+<div class="date">10</div>
+<div class="date">11</div>
+<div class="date">12</div>
+
+<div class="date">13</div>
+<div class="date">14</div>
+
+<div class="date special">15</div>
+
+<div class="date">16</div>
+<div class="date">17</div>
+<div class="date">18</div>
+<div class="date">19</div>
+
+<div class="date">20</div>
+<div class="date">21</div>
+<div class="date">22</div>
+<div class="date">23</div>
+<div class="date">24</div>
+<div class="date">25</div>
+<div class="date">26</div>
+
+<div class="date">27</div>
+<div class="date">28</div>
+<div class="date">29</div>
+<div class="date">30</div>
+<div class="date">31</div>
+
+</div>
+
+<button onclick="next(4)">One More 💕</button>
+</div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="p4">
+<div class="card">
+<div class="heart">🎉</div>
+<h1>Congratulations!</h1>
+
+<div class="names">
+Rumana Masi ❤️ Siddik Maha
+</div>
+
+<p>
+✨ 15 December 2026 ✨<br><br>
+Wishing you both a lifetime of<br>
+love, happiness and beautiful memories.
+</p>
+
+<div class="heart">💍❤️</div>
+</div>
+</section>
+
+<script>
+function next(n){
+ document.querySelectorAll(".page")
+ .forEach(x=>x.classList.remove("active"));
+ document.getElementById("p"+n)
+ .classList.add("active");
+}
+</script>
+
+</body>
+</html>
